@@ -1,0 +1,21 @@
+cloud:
+  aws:
+    credentials:
+#      access-key: KEY
+#      secret-key: SECRET
+      profile-name: default
+    region: eu-west-1
+
+
+
+destination:
+  topic:
+    name: first-topic
+
+
+server:
+  servlet:
+    context-path: /api
+
+
+

@@ -41,7 +41,7 @@ To describe, run `describe.sh`.
     {
         "Stacks": [
             {
-                "StackId": "arn:aws:cloudformation:eu-west-1:035864429412:stack/aws-sqs/4e0f12f0-9d74-11eb-936f-026c3755f36f",
+                "StackId": "arn:aws:cloudformation:eu-west-1:{account-id}:stack/aws-sqs/4e0f12f0-9d74-11eb-936f-026c3755f36f",
                 "DriftInformation": {
                     "StackDriftStatus": "NOT_CHECKED"
                 },
@@ -51,7 +51,7 @@ To describe, run `describe.sh`.
                     {
                         "Description": "ARN of new AmazonSQS Queue",
                         "OutputKey": "QueueARN",
-                        "OutputValue": "arn:aws:sqs:eu-west-1:035864429412:first-topic"
+                        "OutputValue": "arn:aws:sqs:eu-west-1:{account-id}:first-topic"
                     },
                     {
                         "Description": "Name of new Amazon SQS Queue",
@@ -61,7 +61,7 @@ To describe, run `describe.sh`.
                     {
                         "Description": "URL of new Amazon SQS Queue",
                         "OutputKey": "QueueURL",
-                        "OutputValue": "https://sqs.eu-west-1.amazonaws.com/035864429412/first-topic"
+                        "OutputValue": "https://sqs.eu-west-1.amazonaws.com/{account-id}/first-topic"
                     }
                 ],
                 "EnableTerminationProtection": false,
@@ -74,7 +74,7 @@ To describe, run `describe.sh`.
                 "StackStatus": "CREATE_COMPLETE",
                 "DisableRollback": false,
                 "RollbackConfiguration": {},
-                "ChangeSetId": "arn:aws:cloudformation:eu-west-1:035864429412:changeSet/awscli-cloudformation-package-deploy-1618440841/8b09ed3d-03d9-41e1-8486-065b88fa3c1d",
+                "ChangeSetId": "arn:aws:cloudformation:eu-west-1:{account-id}:changeSet/awscli-cloudformation-package-deploy-1618440841/8b09ed3d-03d9-41e1-8486-065b88fa3c1d",
                 "LastUpdatedTime": "2021-04-14T22:54:07.017Z"
             }
         ]
@@ -95,7 +95,7 @@ To describe, run `describe.sh`.
 To invoke the service, run the URL - `http://localhost:8080/api/produceMessage/Hello`
 
 ### Response
-In logs you will see the logs as below:
+In logs you will see the as below:
 
     2021-04-14 23:46:00.671  INFO 34950 --- [nio-8080-exec-1] c.aws.sqs.controller.ProducerController  : Received Message Hello
     2021-04-14 23:46:00.673  INFO 34950 --- [nio-8080-exec-1] c.a.s.c.a.s.s.MessageSenderService       :  Messgae Hello 
